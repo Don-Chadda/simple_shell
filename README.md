@@ -1,31 +1,50 @@
-simple_shell
-A simple C shell project
-Description
-This is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). Additional functions are also included. This program was written entirely in C as a milestone project for Alx-Holberton School.
+<<<<<<< HEAD
+# shellby - Simple Shell :shell:
 
-Installation
-Clone this repository into your working directory. Files should be compiled with GCC and the following flags: -Wall -Wextra -Werror -pedantic -Wno-format.
+A simple UNIX command interpreter written as part of the low-level programming and algorithm track at Holberton School.
 
-Usage
-After compilation, the resulting program can run stand-alone, either in interactive or non-interactive mode.
+## Description :speech_balloon:
 
-Interactive Mode
-In interactive mode, simply run the program and wait for the prompt to appear. From there, you can type commands freely, exiting with either the "exit" command or ctrl-D.
+**Shellby** is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
 
-Non-Interactive Mode
-In non-interactive mode, echo your desired command and pipe it into the program like this:
+### Invocation :running:
 
-echo "ls" | ./shell In non-interactive mode, the program will exit after finishing your desired command(s).
+Usage: **shellby** [filename]
 
-This is the man page which contains all functions and descriptions of all the functions used in this Simple shell project. To access this page, Do:
+To invoke **shellby**, compile all `.c` files in the repository and run the resulting executable:
 
-AUTHORS
-This file contains the details of all the individuals that contributed to this shell project.
+```
+gcc *.c -o shellby
+./shellby
+```
 
-Features
-DIsplay a prompt and wait for the user to type a command. A command-line always ends with a new line.
-The prompt is displayed again each time a command has been executed.
-The command lines are simple, no semicolons, no pipes, no redirections, or any other advanced features.
-The command lines are made only of one word.No arguement will be passed to the programs. 5.If an executable is not found the shell prints an error message and displayu the prompt again.
-Credits
-All codes written by Peter Daniel Chadda Turay and Joy Oluwafemi.
+**Shellby** can be invoked both interactively and non-interactively. If **shellby** is invoked with standard input not connected to a terminal, it reads and executes received commands in order.
+
+Example:
+```
+$ echo "echo 'hello'" | ./shellby
+'hello'
+$
+```
+
+If **shellby** is invoked with standard input connected to a terminal (determined by [isatty](https://linux.die.net/man/3/isatty)(3)), an *interactive* shell is opened. When executing interactively, **shellby** displays the prompt `$ ` when it is ready to read a command.
+
+Example:
+```
+$./shellby
+$
+```
+
+Alternatively, if command line arguments are supplied upon invocation, **shellby** treats the first argument as a file from which to read commands. The supplied file should contain one command per line. **Shellby** runs each of the commands contained in the file in order before exiting.
+
+Example:
+```
+$ cat test
+echo 'hello'
+$ ./shellby test
+'hello'
+$
+```
+=======
+readme
+>>>>>>> 894da359f5ce2f88cd225602cac7f65d018fbd29
