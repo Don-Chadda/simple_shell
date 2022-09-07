@@ -28,4 +28,4 @@ The prompt is displayed again each time a command has been executed.
 The command lines are simple, no semicolons, no pipes, no redirections, or any other advanced features.
 The command lines are made only of one word.No arguement will be passed to the programs. 5.If an executable is not found the shell prints an error message and displayu the prompt again.
 Credits
-All codes written by Ademola Glory and Emmanuel Murairi.
+All codes written by Peter Daniel Chadda Turay and Joy Oluwafemi.
